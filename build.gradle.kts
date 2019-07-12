@@ -28,6 +28,7 @@ dependencies {
     testImplementation("org.springframework.boot:spring-boot-starter-test")
 
     implementation("org.mariadb.jdbc:mariadb-java-client")
+    implementation("mysql:mysql-connector-java")
 }
 
 tasks.withType<KotlinCompile> {
