@@ -2,7 +2,10 @@ package com.saaryogev.financeappbe
 
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
-import org.springframework.web.bind.annotation.*
+import org.springframework.web.bind.annotation.GetMapping
+import org.springframework.web.bind.annotation.PostMapping
+import org.springframework.web.bind.annotation.RequestBody
+import org.springframework.web.bind.annotation.RestController
 
 @RestController
 class ExpenseController(private val expenseRepo: ExpenseRepo) {
@@ -20,10 +23,5 @@ class ExpenseController(private val expenseRepo: ExpenseRepo) {
     @GetMapping("/expense")
     fun getExpenses(): MutableIterable<Expense> {
         return expenseRepo.findAll()
-    }
-
-    @DeleteMapping("/expense")
-    fun clearExpenses() {
-        expenseRepo.deleteAll()
     }
 }
