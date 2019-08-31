@@ -14,14 +14,14 @@ class ExpenseController(private val expenseRepo: ExpenseRepo, tokenVerifier: Goo
 
     private val loginVerifier = LoginVerifier(tokenVerifier)
 
-    @PostMapping("/expenseString")
+    @PostMapping("/expenses")
     fun addExpense(@RequestBody expense: String) {
         val expenseWithToken = ObjectMapper().readValue<Expense>(expense)
         val expenseWithUserId = Expense(expenseWithToken.amount, expenseWithToken.type, expenseWithToken.paymentMethod, expenseWithToken.paymentDate, loginVerifier.verifyLogin(expenseWithToken.userId))
         expenseRepo.save(expenseWithUserId)
     }
 
-    @GetMapping("/expense")
+    @GetMapping("/expenses")
     fun getExpensesByUser(tokenId: String): MutableIterable<Expense> {
         return expenseRepo.findAllByUserId(loginVerifier.verifyLogin(tokenId))
     }
