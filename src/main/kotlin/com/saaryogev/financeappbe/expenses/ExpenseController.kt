@@ -1,4 +1,4 @@
-package com.saaryogev.financeappbe
+package com.saaryogev.financeappbe.expenses
 
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue

@@ -1,4 +1,4 @@
-package com.saaryogev.financeappbe
+package com.saaryogev.financeappbe.expenses
 
 import java.util.*
 import javax.persistence.Entity

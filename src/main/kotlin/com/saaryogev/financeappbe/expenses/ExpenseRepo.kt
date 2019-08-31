@@ -1,4 +1,4 @@
-package com.saaryogev.financeappbe
+package com.saaryogev.financeappbe.expenses
 
 import org.springframework.data.repository.CrudRepository
 
