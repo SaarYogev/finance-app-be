@@ -23,12 +23,14 @@ dependencies {
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
-    runtimeOnly("com.h2database:h2:1.4.197")
+    runtimeOnly("com.h2database:h2:1.+")
     runtimeOnly("org.springframework.boot:spring-boot-devtools")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
 
     implementation("org.mariadb.jdbc:mariadb-java-client")
     implementation("mysql:mysql-connector-java")
+    implementation("com.google.api-client:google-api-client:1.+")
+    implementation("com.google.http-client:google-http-client-apache-v2:1.+")
 }
 
 tasks.withType<KotlinCompile> {

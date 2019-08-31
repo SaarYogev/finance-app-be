@@ -11,7 +11,8 @@ data class Expense(
         val amount: Int,
         val type: String,
         val paymentMethod: String,
-        val paymentDate: Date
+        val paymentDate: Date,
+        val userId: String
 ) {
     @Id @GeneratedValue(strategy= GenerationType.IDENTITY) val id: Int = 0
 }
